@@ -18,7 +18,6 @@ describe('Checkout', () => {
         //when
         const checkout = new Checkout(pricingRules);
         checkout.add(item);
-        checkout.total();
         //then
         expect(checkout.total()).toEqual(Big(161.98));
         expect(checkout.discount()).toEqual(Big(18.00));
@@ -40,7 +39,6 @@ describe('Checkout', () => {
         //when
         const checkout = new Checkout(pricingRules);
         checkout.add(item);
-        checkout.total();
         //then
         expect(checkout.total()).toEqual(Big(600));
         expect(checkout.discount()).toEqual(Big(400));
@@ -63,7 +61,6 @@ describe('Checkout', () => {
         //when
         const checkout = new Checkout(pricingRules);
         checkout.add(item);
-        checkout.total();
         //then
         expect(checkout.total()).toEqual(Big(300));
         expect(checkout.discount()).toEqual(Big(0));
@@ -95,7 +92,6 @@ describe('Checkout', () => {
         const checkout = new Checkout(pricingRules);
         checkout.add(item1);
         checkout.add(item2);
-        checkout.total();
 
         //then
         expect(checkout.total()).toEqual(Big(1100.66))
